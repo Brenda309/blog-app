@@ -50,12 +50,6 @@ Then browse http://localhost:3000
 - Twitter: [@BrendaWihogora](https://twitter.com/BrendaWihogora)
 - LinkedIn: [BrendaWihogora](https://linkedin.com/in/BrendaWihogora/)
 
-👤 **Hans Zizold**
-
- - GitHub:[@githubhandle](https://github.com/HansZizold) 
-- Twitter:[@twitterhandle](https://twitter.com/hanzio27) 
-- LinkedIn:[LinkedIn](https://www.linkedin.com/in/hans-paul-zizold-37129037/) 
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
