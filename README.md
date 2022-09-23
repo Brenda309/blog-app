@@ -42,7 +42,7 @@ To get a local copy up and running follow these simple example steps.
 
 Then browse http://localhost:3000
 
-## Authors
+## Author
 
 👤 **Brenda Wihogora**
 
@@ -67,7 +67,6 @@ Give a ⭐️ if you like this project!
 - etc
 
 ## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
