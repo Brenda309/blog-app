@@ -18,8 +18,8 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'GET /users/:id/posts/show' do
     before(:each) do
-    get '/users/:id/posts/show'
-  end
+      get '/users/:id/posts/show'
+    end
     it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
