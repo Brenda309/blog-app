@@ -1,18 +1,30 @@
-<h1>User <%= @user.name %></h1>
-<p>Here are the details of a user given its id</p>
-<%= link_to '< Back to users', users_path %>
-<%= render @user %>
+<div class="user-show-container">
+  <div class="user">
+    <img src="<%= @users.photo %>" alt="User-photo" class="user-photo">
+    <div class="user-info">
+      <h1><%= @users.name%></h1>
+      <p class="posts-number">Number of posts: <%= @users.post_counter %></p>
+    </div>
+  </div>
+  <section >
+    <div class="user-bio">
+      <h2>Bio</h2>
+      <p> <%=@users.bio%> </p>
+    <div>
 
-<div class="user__bio">
-  <h2>Bio</h2>
-  <p><%= @user.bio %></p>
-</div>
-
-<% if @user.posts.empty? %>
-  <h2>No posts created</h2>
-<% else %>
-  <% @user.last_three_posts.each do |post| %>
-    <%= render post %>
-  <% end %>
-  <%= link_to 'See all posts', user_posts_path(@user.id) %>
-<% end %>
+    <% @last_three_posts.each_with_index do |post, i| %>
+      <div class="last-posts">
+        <div class="user-info">
+          <h3>Post <%=i+1%> </h3>
+          <p> <%=post.text%> </p>
+          <div>
+            <p> Comments: <%=post.comments_counter%>, Likes: <%=post.likes_counter%> </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </section>
+  <button class="see">
+        <%= link_to "See all posts", user_posts_path(@users), {:class => "button_class"} %>
+  </button>
+<div>
