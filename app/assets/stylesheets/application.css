@@ -60,3 +60,41 @@ h6{
    font-size: 30px;
 padding: 30px;
 }
+
+.bio{
+    border: 2px solid black;
+    padding: 30px;
+    margin: 50px;
+}
+
+
+.posts{
+    border: 2px solid black;
+    margin: 20px;
+    list-style: none;
+}
+
+.post{
+   align-content: space-around;
+   border:  2px solid black;
+   margin: 50px;
+}
+
+.comment_title{
+   text-align: center;
+}
+
+.text{
+   text-align: center;
+}
+
+.comments{
+   list-style: none;
+   align-items: center;
+   border:2px solid black ;
+   margin:40px;
+}
+
+.counter{
+   text-align: end;
+}
