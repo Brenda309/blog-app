@@ -14,7 +14,7 @@
     <% if post.comments.empty? %>
       <li>No comments</li>
     <% else %>
-      <% post.recent_5_comments.each do |comment| %>
+      <% post.five_most_ricent_comments.each do |comment| %>
         <%= render comment %>
       <% end %>
     <% end %>
