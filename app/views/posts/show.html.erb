@@ -7,7 +7,7 @@
 </div>
 
  <%= render 'comments/form' %>
-  <%= form_with url: user_post_likes_url(@user, @post), method: 'post' do |f| %>
+  <%= form_with url: user_post_likes_url(@users, @posts), method: 'post' do |f| %>
     <div>
       <%= f.submit 'Like' %>
     </div>
