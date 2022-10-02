@@ -6,11 +6,15 @@
   <p class= 'text'><%= @posts.text %></p>
 </div>
 
-<div class="comments">
-  <ul>
-    <% @comments.each do |comment| %>
-      <li class= 'comments'><%= comment.author.name %>: <%= comment.text%></li>
-    <% end %>
+ <%= render 'comments/form' %>
+  <%= form_with url: user_post_likes_url(@user, @post), method: 'post' do |f| %>
+    <div>
+      <%= f.submit 'Like' %>
+    </div>
+  <% end %>
+  <ul class="post__comments">
+    <%= render @comments %>
   </ul>
 </div>
+
 
