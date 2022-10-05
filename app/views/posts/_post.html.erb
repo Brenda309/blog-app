@@ -1,0 +1,23 @@
+<ul class="posts">
+  <li class="post">
+    <%= link_to user_post_path(post.author_id, post.id) do %>
+      <div class="post_container">
+        <div class="post_title"><%= post.title %></div>
+        <div class="post_text"><%= post.text %></div>
+        <div class="post_indicators">
+          <div class="post_comments_counter">Comments: <%= post.comments_counter %></div>
+          <div class="post_likes_counter">Likes: <%= post.likes_counter %></div>
+        </div>
+      </div>
+    <% end %>
+    <ul class="post_comments">
+    <% if post.comments.empty? %>
+      <li>No comments</li>
+    <% else %>
+      <% post.five_most_ricent_comments.each do |comment| %>
+        <%= render comment %>
+      <% end %>
+    <% end %>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,17 @@
+<h1>User <%= @users.name %></h1>
+<%= render @users %>
+
+<div class="bio">
+  <h2>Bio</h2>
+  <p ><%= @users.bio %></p>
+</div>
+<div class = post>
+<% if @users.posts.empty? %>
+  <h2>No posts created</h2>
+<% else %>
+  <% @users.last_three_posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+  <%= link_to 'See all posts', user_posts_path(@users.id) %>
+<% end %>
+</div>

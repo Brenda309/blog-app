@@ -1,0 +1,16 @@
+<div class="post">
+  <div>
+    <h1 class= "comment_title"><%= @posts.title %> by Lilyn </h1>
+    <p class = "counter">Comments <%= @posts.comments_counter%>, Likes <%= @posts.likes_counter%></p>
+  </div>
+  <p class= 'text'><%= @posts.text %></p>
+</div>
+
+<div class="comments">
+  <ul>
+    <% @comments.each do |comment| %>
+      <li class= 'comments'><%= comment.author.name %>: <%= comment.text%></li>
+    <% end %>
+  </ul>
+</div>
+
