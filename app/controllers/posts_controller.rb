@@ -1,35 +1,37 @@
+require_relative '../helpers/posts_helper'
 class PostsController < ApplicationController
+  include PostsHelper
   def index
-    @users = User.find(params[:user_id])
-    @posts = @users.posts
+    @current_user = current_user
+    @user = User.find(params[:user_id])
+    @posts = @user.posts
   end
 
   def show
-    @user = current_user
-    @posts = Post.find(params[:id])
-    @comments = @posts.comments
+    @current_user = current_user
+    @post = Post.find(params[:id])
+    @comments =  @post.comments.includes(:author)
   end
 
   def new
-    @user = current_user
+    @current_user = current_user
     @post = Post.new
   end
 
   def create
-    @user = current_user
-    @post = @user.posts.create(post_params)
-    if @post.save
-      flash[:success] = 'Post saved successfully'
-      redirect_to user_posts_path(@user.id)
-    else
-      flash.now[:error] = 'Error: Post could not be saved'
-      render :new, status: 422
+    @current_user = current_user
+    post = Post.new(post_params)
+    post.author = current_user
+    respond_to do |format|
+      format.html do
+        if post.save
+          flash[:success] = 'Post was successfully created'
+          redirect_to user_path(current_user)
+        else
+          flash.now[:error] = 'Error: Post could not be saved'
+          render :new, new_user_post_path(current_user)
+        end
+      end
     end
-  end
-
-  private
-
-  def post_params
-    params.require(:post).permit(:title, :text)
   end
 end

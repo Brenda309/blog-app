@@ -1,20 +1,18 @@
-<div class="post">
-  <div>
-    <h1 class= "comment_title"><%= @posts.title %> by Lilyn </h1>
-    <p class = "counter">Comments <%= @posts.comments_counter%>, Likes <%= @posts.likes_counter%></p>
+<div class="card m-3">
+  <div class="card-body">
+    <h5 class="card-title"><%= @post.title %> by <%= @post.author.name %></h5>
+    <p class="mb-2 text-muted text-end"><small>Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></small></p>
+    <p class="card-text"><%= @post.text %></p>
   </div>
-  <p class= 'text'><%= @posts.text %></p>
 </div>
-
- <%= render 'comments/form' %>
-  <%= form_with url: user_post_likes_url(@users, @posts), method: 'post' do |f| %>
-    <div>
-      <%= f.submit 'Like' %>
-    </div>
-  <% end %>
-  <ul class="post__comments">
-    <%= render @comments %>
-  </ul>
-</div>
-
-
+<div class="card m-3">
+  <div class="card-body">
+    <% if @post.comments_counter.zero? %>
+      <p class="mb-2 text-muted"><small>There are no comments yet</small></p>
+    <% else %>
+      <% @comments.each do |comment| %>
+        <%= comment.author.name %>: <%= comment.text %><br/>
+      <% end %>
+    <% end %>
+  </div>
+<br/><br/>

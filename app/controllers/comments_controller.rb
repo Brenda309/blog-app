@@ -1,28 +1,25 @@
+require_relative '../helpers/comments_helper'
 class CommentsController < ApplicationController
+  include CommentsHelper
   def new
-    @user = current_user
-    @post = Post.find(params[:id])
     @comment = Comment.new
   end
 
   def create
-    @user = current_user
-    @post = Post.find(params[:post_id])
-    @comment = Comment.new(comment_params)
-    @comment.author = @user
-    @comment.post = @post
-    if @comment.save
-      flash[:success] = 'Comment saved successfully'
-      redirect_to user_posts_path(@post.author)
-    else
-      flash.now[:error] = 'Error: Comment could not be saved'
-      render :new, status: 422
+    post = Post.find(params[:post_id])
+    user = User.find(params[:user_id])
+    comment = Comment.new(post_params)
+    comment.post = post
+    comment.author = current_user
+    respond_to do |format|
+      format.html do
+        if comment.save
+          flash[:success] = 'Comment was successfully created'
+        else
+          flash.now[:error] = 'Error: Comment could not be saved'
+        end
+        redirect_to user_post_path(user, post)
+      end
     end
-  end
-
-  private
-
-  def comment_params
-    params.require(:comment).permit(:text, :author, :post)
   end
 end
