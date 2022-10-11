@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- */
+
 * {
   margin: 0;
   padding: 0;
@@ -101,19 +101,19 @@ h6 {
   text-align: end;
 }
 
-.post_title{
-    color: rgb(8, 97, 45);
+.post_title {
+  color: rgb(8, 97, 45);
   font-size: 30px;
 }
 
-.post_text{
-    color:black
+.post_text {
+  color: black;
 }
 
-.post_comments{
-    color:rgb(31, 121, 89)
+.post_comments {
+  color: rgb(31, 121, 89);
 }
 
-.post_likes{
-    color:rgb(75, 117, 102)
+.post_likes {
+  color: rgb(75, 117, 102);
 }
