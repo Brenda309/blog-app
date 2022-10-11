@@ -17,5 +17,22 @@ RSpec.describe 'User index page', type: :feature do
     it 'shows user name' do
       expect(page).to have_content(@user.name)
     end
+
+     it 'shows the welcome' do
+      expect(page).to have_content('Welcome')
+    end
+  it 'shows the photo' do
+      expect(page.body).to include('https://images.pexels.com/photos/1181667/pexels-photo-1181667')
+    end
+
+      it 'the number of posts each user has written.' do
+      expect(page.body).to have_content('Number of Posts: 1')
+    end
+
+     it 'When I click on a user, I am redirected to that user.' do
+      click_link(@user.name)
+      expect(page).to have_content('User informations')
+    end
 end
+
 end
