@@ -1,7 +1,7 @@
 require_relative '../helpers/posts_helper'
 
 class PostsController < ApplicationController
-   include PostsHelper
+  include PostsHelper
   def index
     @current_user = current_user
     @user = User.find(params[:user_id])
