@@ -31,7 +31,7 @@ and accomplishing their goals, time management is an area where most of us tend 
       visit user_path(@first_user)
     end
 
-    it 'shows user name' do
+    it 'shows the user name' do
       expect(page).to have_content(@first_user.name)
     end
 
@@ -47,14 +47,14 @@ and accomplishing their goals, time management is an area where most of us tend 
       expect(page).to have_content(@second_post.title)
     end
 
-    it 'I can see a post\'s title' do
+    it 'shows the number of posts' do
       expect(page).to have_content('Number of Posts')
     end
 
-    it 'I can see a post\'s title' do
+    it 'shows a post\'s comments' do
       expect(page).to have_content('Comments:')
     end
-    it 'I can see a post\'s title' do
+    it 'shows a post\'s likes' do
       expect(page).to have_content('Likes:')
     end
     it 'when a user\'s post is clicked, it redirects to that post\'s show page.' do

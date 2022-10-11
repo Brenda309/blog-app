@@ -15,11 +15,11 @@ RSpec.describe 'User index page', type: :feature do
       visit users_path
     end
 
-    it 'shows user name' do
+    it 'shows the user name' do
       expect(page).to have_content(@user.name)
     end
 
-    it 'shows the welcome' do
+    it 'shows the Welcome' do
       expect(page).to have_content('Welcome')
     end
     it 'shows the photo' do
