@@ -31,7 +31,7 @@ RSpec.describe 'User index page', type: :feature do
 
      it 'When I click on a user, I am redirected to that user.' do
       click_link(@user.name)
-      expect(page).to have_content('User informations')
+      expect(page).to have_content('User information')
     end
 end
 
