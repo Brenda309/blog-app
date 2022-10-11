@@ -39,11 +39,11 @@ and accomplishing their goals, time management is an area where most of us tend 
       expect(page).to have_content('User information')
     end
 
-    it 'the number of posts the user has written.' do
+    it 'shows the number of posts the user has written.' do
       expect(page).to have_content('Number of Posts: 3')
     end
 
-    it 'I can see a post\'s title' do
+    it 'shows a post\'s title' do
       expect(page).to have_content(@second_post.title)
     end
 
