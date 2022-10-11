@@ -1,6 +1,7 @@
 require_relative '../helpers/posts_helper'
+
 class PostsController < ApplicationController
-  include PostsHelper
+   include PostsHelper
   def index
     @current_user = current_user
     @user = User.find(params[:user_id])
@@ -9,8 +10,8 @@ class PostsController < ApplicationController
 
   def show
     @current_user = current_user
-    @post = Post.find(params[:id])
-    @comments =  @post.comments.includes(:author)
+    @post = Post.includes(:author).find(params[:id])
+    # @post = @user.post.includes(:author)
   end
 
   def new

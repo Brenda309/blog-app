@@ -1,26 +1,36 @@
-require 'rails_helper' 
-RSpec.describe 'Users', type: :request do 
-    describe 'GET /' do 
-        before(:each) do 
-            @lilly = User.create(name: 'Lilly', photo: 'https://c.tenor.com/YIeHLcvImMsAAAAM/meditation-dog.gif', bio: 'Teacher from Poland') 
-            Post.create(author: @lilly, title: 'Hello', text: 'This is my first post') 
-            Post.create(author: @lilly, title: 'Hey', text: 'This is my second post') 
-            get '/'
-         end 
-         it 'returns http success' do 
-            expect(response).to have_http_status(:success) 
-        end 
-        it 'render template users/index' do 
-            expect(response).to render_template('users/index') 
-        end 
-        it 'returns http success' do 
-            expect(response).to have_http_status(:success) 
-        end 
-        it 'render template users/index'
-         do expect(response).to render_template('users/index') 
-        end 
-        it 'returns http success' 
-        do expect(response).to have_http_status(:success) 
-        end 
-    end 
-end 
+# require 'rails_helper'
+
+# RSpec.describe 'Users', type: :request do
+#   describe 'GET /' do
+#     before(:each) do
+#       get '/'
+#     end
+#     it 'is a success' do
+#       expect(response).to have_http_status(:ok)
+#     end
+#     it 'If a correct template was rendered' do
+#      expect(response).to render_template(:index)
+#     end
+
+#     it 'If the response body includes correct placeholder text' do
+#       expect(response.body).to include('app/views/users/index.html.erb')
+
+#     end
+#   end
+
+#   describe 'GET /users/show' do
+#     before(:each) do
+#       get '/users/show'
+#     end
+#     it 'is a success' do
+#       expect(response).to have_http_status(:ok)
+#     end
+#     it 'If a correct template was rendered' do
+#       expect(response).to render_template('users/show')
+#     end
+
+#     it 'If the response body includes correct placeholder text' do
+#       expect(response.body).to include('<h1>User#Name by  given username</h1>')
+#     end
+#   end
+# end
