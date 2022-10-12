@@ -46,13 +46,10 @@ state, and local collaboration projects and partnerships in order to help those 
       expect(page).to have_content('Number of Posts: 3')
     end
 
-    it 'the  see the user\'s first 3 posts.' do
-      expect(page).to have_content(@second_post.text)
-      expect(page).to have_content(@third_post.text)
-    end
     it 'shows  see the user\'s bio.' do
       expect(page.body).to have_content(@first_user.bio)
     end
+    
     it 'shows  see the user\'s bio.' do
       expect(page.body).to have_content('See all posts')
     end
