@@ -49,7 +49,7 @@ state, and local collaboration projects and partnerships in order to help those 
     it 'shows  see the user\'s bio.' do
       expect(page.body).to have_content(@first_user.bio)
     end
-    
+
     it 'shows  see the user\'s bio.' do
       expect(page.body).to have_content('See all posts')
     end
