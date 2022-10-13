@@ -8,7 +8,7 @@
     
     <% end %>
 
-  <%= form_with model: @comments, url: user_post_comments_path(@current_user, post), method: :post, local: true, scope: :user_post_comments do |form| %>
+  <%= form_with model: @comments, url: user_post_comments_path(user.id, post), method: :post, local: true, scope: :user_post_comments do |form| %>
 
   <div>
     <%= form.text_field :text, placeholder: "Comment text" %>
@@ -16,7 +16,7 @@
 
   <%= form.submit value: 'Add comment' %>
 <% end %>
- <%= form_with model: @likes, url: user_post_likes_path(@current_user, post), method: :post, local: true, scope: :user_post_likes do |form| %>
+ <%= form_with model: @likes, url: user_post_likes_path(user.id, post), method: :post, local: true, scope: :user_post_likes do |form| %>
 
       <%= form.submit value: 'Add Like' %>
       

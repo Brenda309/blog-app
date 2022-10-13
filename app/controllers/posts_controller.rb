@@ -3,24 +3,24 @@ require_relative '../helpers/posts_helper'
 class PostsController < ApplicationController
   include PostsHelper
   def index
-    @current_user = current_user
+    @current_user = user
     @user = User.find(params[:user_id])
     @posts = @user.posts
   end
 
   def show
-    @current_user = current_user
+    @current_user = user
     @post = Post.includes(:author).find(params[:id])
     # @post = @user.post.includes(:author)
   end
 
   def new
-    @current_user = current_user
+    @current_user = user
     @post = Post.new
   end
 
   def create
-    @current_user = current_user
+    @current_user = user
     post = Post.new(post_params)
     post.author = current_user
     respond_to do |format|
