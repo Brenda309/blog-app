@@ -13,10 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.home {
+  display: flex;
+  border-bottom: 2px solid rgb(247, 250, 247);
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.nav_buttons {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .users {
@@ -98,4 +111,37 @@ h6 {
 
 .counter {
   text-align: end;
+}
+
+.post_title {
+  color: rgb(8, 97, 45);
+  font-size: 30px;
+}
+
+.post_text {
+  color: black;
+}
+
+.post_comments {
+  color: rgb(31, 121, 89);
+}
+
+.post_likes {
+  color: rgb(75, 117, 102);
+}
+
+.navbar {
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-button {
+  background-color: rgb(62, 107, 231);
+  border: none;
+  list-style: none;
+  color: black;
+  border-radius: 5px;
+  justify-content: end;
+  font-size: 20px;
 }
