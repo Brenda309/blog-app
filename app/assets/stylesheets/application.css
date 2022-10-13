@@ -19,16 +19,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .home {
   display: flex;
-  border-bottom: 2px solid rgb(247, 250, 247); 
+  border-bottom: 2px solid rgb(247, 250, 247);
   justify-content: space-between;
-  margin: 30px
+  margin: 30px;
 }
 
-.nav_buttons{
+.nav_buttons {
   display: flex;
- justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .users {
@@ -135,7 +136,7 @@ h6 {
   flex-direction: row;
 }
 
-.navbar-button{
+.navbar-button {
   background-color: rgb(62, 107, 231);
   border: none;
   list-style: none;
@@ -143,5 +144,4 @@ h6 {
   border-radius: 5px;
   justify-content: end;
   font-size: 20px;
-
 }
