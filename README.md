@@ -9,9 +9,25 @@ This App is a a fully functional website that will show the list of posts and em
 Ruby On Rails (RoR)
 PostegreSQL
 
-## Live Demo (if available)
+## Project Requirements:
+Create the entities presented in this diagram:
+![blog_app_erd](https://user-images.githubusercontent.com/72613775/212996390-241547f3-734a-4f6b-9184-f823dfd9e3f7.png)
+## wireframes
+![blog_login](https://user-images.githubusercontent.com/72613775/212997357-ac167858-83bd-4657-9aa9-91f0787b15d3.png)
 
-[Live Demo Link](https://livedemo.com)
+![blog_root_users](https://user-images.githubusercontent.com/72613775/212997315-039afdf8-cd71-4f8a-b0a6-1bf5075dc209.png)
+
+
+![blog_single_post](https://user-images.githubusercontent.com/72613775/212996913-90f8fe97-628b-45e9-b278-f9465ef6c3bf.png)
+070-8e84-ab33f078f319.png)
+e0e9.png)
+
+![blog_user_all_posts](https://user-images.githubusercontent.com/72613775/212996712-797db76c-922e-4747-a1e7-6c985fee86d2.png)
+
+![blog_user_page](https://user-images.githubusercontent.com/72613775/212996986-19a7d81e-a8d2-4306-b059-cf9a188d94c9.png)
+
+
+
 
 
 ## Getting Started
